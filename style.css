@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 
-/* ================= GLOBAL ================= */
 body {
   font-family: 'Poppins', sans-serif;
   background: radial-gradient(circle at 20% 30%, #0f172a, #020617);
@@ -108,7 +107,6 @@ nav a:hover {
   color: cyan;
 }
 
-/* THEME BUTTON */
 #themeToggle {
   background: none;
   border: 1px solid cyan;
@@ -153,6 +151,8 @@ nav a:hover {
   z-index: 1;
   text-align: center;
   padding: 20px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .hero h1 span {
@@ -237,7 +237,6 @@ nav a:hover {
 }
 
 /* ================= PROJECTS ================= */
-/* ================= PROJECTS ================= */
 .projects {
   display: flex;
   flex-wrap: wrap;
@@ -245,7 +244,7 @@ nav a:hover {
 }
 
 .project-card {
-  width: 260px; /* keep fixed width for desktop */
+  width: 260px;
   margin: 15px;
   padding: 20px;
   border-radius: 15px;
@@ -256,14 +255,6 @@ nav a:hover {
 .project-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 0 20px #9b5cff;
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-  .project-card {
-    width: 100%;  /* full width only on small screens */
-    margin: 10px 0;
-  }
 }
 
 /* ================= TERMINAL ================= */
@@ -395,13 +386,11 @@ img {
 }
 
 @media (max-width: 768px) {
-  nav {
-    display: none;
-  }
 
+  /* Navbar */
   .navbar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 15px 20px;
   }
 
@@ -409,25 +398,49 @@ img {
     display: flex;
     flex-direction: column;
     width: 100%;
+    align-items: center;
     margin-top: 10px;
   }
 
   nav a {
     margin: 5px 0;
+    font-size: 1rem;
   }
 
   #themeToggle {
-    align-self: flex-end;
     margin-top: 10px;
+    align-self: center;
   }
 
-  .modal-content {
-    width: 90%;
-    padding: 15px;
+  /* Hero */
+  .hero-content {
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .hero h1 {
+    font-size: 1.8rem;
+    word-wrap: break-word;
+  }
+
+  .typing {
+    font-size: 1rem;
+  }
+
+  .cta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .cta a.btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
   }
 
   .project-card {
@@ -435,17 +448,8 @@ img {
     margin: 10px 0;
   }
 
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .typing {
-    font-size: 1rem;
-  }
-
-  .cta a.btn {
-    width: 100%;
-    text-align: center;
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .timeline-item h3 {
@@ -454,6 +458,7 @@ img {
 }
 
 @media (max-width: 480px) {
+
   .skills-grid {
     grid-template-columns: 1fr;
   }
@@ -468,5 +473,14 @@ img {
 
   .typing {
     font-size: 0.9rem;
+  }
+
+  .cta {
+    gap: 8px;
+  }
+
+  .cta a.btn {
+    font-size: 0.9rem;
+    padding: 10px;
   }
 }
