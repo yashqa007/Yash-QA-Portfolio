@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI QA Engineer | Yash</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <h2 class="logo">AI<span>Quality Engineer</span></h2>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <button id="themeToggle" title="Toggle Theme">🌙</button>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <canvas id="particles"></canvas>
+
+  <div class="hero-content">
+    <h1>Hi, I'm <span>Yash</span></h1>
+    <h2 class="typing"></h2>
+
+    <div class="cta">
+      <a href="Yash CV 2026 copy.pdf" class="btn" download>Download Resume</a>
+      <a href="#contact" class="btn outline">Contact Me</a><br>
+      <br>
+     <p>I break complex financial systems before users do</p>
+    </div>
+  </div>
+  
+</section>
+
+<!-- TERMINAL -->
+<section class="section terminal">
+  <div class="container">
+    <h2>Execution Logs</h2>
+    <div class="terminal-box" id="terminal"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container">
+    <h2>About Me</h2>
+
+    <p>
+      AI-driven QA Engineer specializing in automation testing, Playwright, and intelligent test generation.
+      Experienced in handling large-scale testing workflows, identifying critical bugs, and improving product quality.
+    </p>
+
+    <div class="stats">
+      <div class="card">✔ 400+ Enhancements Tested</div>
+      <div class="card">✔ 300+ Bugs Identified</div>
+      <div class="card">✔ 25+ Daily QA Tasks</div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="container">
+    <h2>Skills & Tools </h2>
+
+    <div class="skills-grid">
+
+  <div class="card">
+    <i class="fa-solid fa-robot"></i>
+    <p>Playwright</p>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-vial"></i>
+    <p>Selenium</p>
+  </div>
+
+  <div class="card">
+    <i class="fa-brands fa-java"></i>
+    <p>Java</p>
+  </div>
+
+  <div class="card">
+    <i class="fa-brands fa-js"></i>
+    <p>JavaScript</p>
+  </div>
+
+<div class="card">
+    <i class="fa-brands fa-code"></i>
+    <p>TypeScript</p>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-paper-plane"></i>
+    <p>Postman</p>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-bug"></i>
+    <p>JIRA</p>
+  </div>
+
+  <div class="card">
+    <i class="fa-brands fa-git-alt"></i>
+    <p>Git</p>
+  </div>
+
+  <div class="card">
+    <i class="fa-solid fa-brain"></i>
+    <p>AI Testing / LLMs</p>
+  </div>
+
+</div>
+  </div>
+</section>
+
+<!-- PLAYWRIGHT -->
+<section class="section playwright">
+  <div class="container">
+    <h2>Live Test Simulation</h2>
+
+    <div class="test-box">
+      <div class="step">Open Browser</div>
+      <div class="step">Login</div>
+      <div class="step">Select PO</div>
+      <div class="step">Submit Invoice</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="container">
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+      <div class="project-card">
+        <h3>AI Test Case Generator</h3>
+        <p>Generate manual + automation test cases using AI by building own AI Agent.</p>
+        <div class="project-actions">
+          <button class="btn small" onclick="openModal()">View Agent Architectutre</button>
+          </button>
+          <button class="btn small" onclick="openGithub()">GitHub</button>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Playwright Automation Framework</h3>
+        <p>Reusable scalable automation architecture for complex financial workflows.</p>
+        <button class="btn small" onclick="openGithub()">GitHub</button>
+      </div>
+
+      <div class="project-card">
+        <h3>Automated Vendor Onboarding</h3>
+        <p>Automated Indian & international vendor onboarding End-to-End processes with All API and OCR validations.</p>
+        <button class="btn small" onclick="openGithub()">GitHub</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <div class="container">
+    <h2>Experience</h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3 style="color: rgb(249, 250, 250);">AI QA Engineer | SaaS FinTech Product</h3>
+      <span style="color: aqua;">Jan 2023 - Present</span>
+        <p>
+          Responsible for implementing AI-driven test automation solutions and end-to-end quality assurance.
+        Led 400+ feature enhancements and resolved 300+ critical bugs, improving product reliability by 60%.
+        </p>
+        <ul>
+        <li>Designed and executed Playwright & Selenium automation suites</li>
+        <li>Integrated AI-based test case generation for complex flows</li>
+        <li>Performed regression testing and functional testing for web & API modules</li>
+        <li>Collaborated with product & dev teams to optimize CI/CD QA pipelines</li>
+      </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="container">
+    <h2>Contact Me</h2>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea placeholder="Message"></textarea>
+      <button class="btn">Send</button>
+    </form>
+  </div>
+</section>
+
+
+<!-- MODAL -->
+<div id="modal" class="modal" role="dialog" >
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <h2>AI QA Automation Agent</h2>
+
+    <pre>
+=============================
+AI QA Automation Agent
+=============================
+
+Description:
+This agent generates manual test cases from user input, converts them into automation scripts, 
+and captures execution logs for QA workflows.
+
+-----------------------------
+Architecture Flow
+-----------------------------
+1. User Input
+   - Receives test scenario or flow description
+   - Example: "Vendor Login and Invoice Submission"
+
+2. Input Parser
+   - Analyzes user input
+   - Identifies actions, expected results, and test steps
+
+3. Test Case Generator
+   - Generates structured manual test cases
+   - Example:
+       Step 1: Enter valid username
+       Step 2: Enter valid password
+       Step 3: Click Login
+       Expected Result: Dashboard loaded
+
+4. Automation Script Generator
+   - Converts manual test cases into Playwright/JS scripts
+   - Example:
+       await page.fill('#username', 'testuser');
+       await page.fill('#password', 'password');
+       await page.click('#login');
+
+5. Logger & Reporter
+   - Tracks execution logs of each step
+   - Displays success/fail status
+
+6. Feedback Loop
+   - Captures errors/failures
+   - Refines test cases & automation scripts for improvement
+
+-----------------------------
+Tech Flow / AI Pipeline
+-----------------------------
+Python Script
+     ↓
+LangChain
+     ↓
+Gemini API
+     ↓
+Google AI Servers
+     ↓
+Gemini Model
+     ↓
+AI Response
+
+-----------------------------
+Tech Stack & Components Used
+-----------------------------
+- Python (Core Scripts & Logic)
+- LangChain (Pipeline Orchestration)
+- Gemini API & Gemini Model (AI Test Case Generation)
+- Google AI Servers (Model Hosting & Processing)
+- Playwright (Automation Scripts)
+- JSON-based structured test case & script generation
+- Custom Logger & Terminal UI for Portfolio Display
+    </pre>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Yash | AI QA Engineer</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
