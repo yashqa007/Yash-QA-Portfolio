@@ -547,3 +547,28 @@ img {
     padding-top: 80px;
   }
 }
+/* ================= CONTACT INFO ================= */
+.contact-info {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.contact-info p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.contact-info i {
+  margin-right: 8px;
+  color: cyan;
+}
+
+.contact-info a {
+  color: cyan;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
