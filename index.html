@@ -139,15 +139,24 @@
 
 <!-- PLAYWRIGHT -->
 <section class="section playwright">
-  <div class="container">
-    <h2>Live Test Simulation</h2>
+  <h2>Live Test Simulation</h2>
+
+  <div class="test-container">
 
     <div class="test-box">
       <div class="step">Open Browser</div>
-      <div class="step">Login</div>
-      <div class="step">Select PO</div>
-      <div class="step">Submit Invoice</div>
+      <div class="step">Navigate to Create PO</div>
+      <div class="step">Enter Details</div>
+      <div class="step">Submit PO</div>
+      <div class="step">PO Created</div>
     </div>
+
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+
+    <p class="test-status">Initializing...</p>
+
   </div>
 </section>
 
@@ -227,12 +236,17 @@
     </div>
 
     <!-- FORM (KEEP BELOW) -->
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Email" required />
-      <textarea placeholder="Message"></textarea>
-      <button class="btn">Send</button>
-    </form>
+    <form class="contact-form" action="https://formspree.io/f/xdawrajv" method="POST">
+
+  <input type="text" name="name" placeholder="Your Name" required />
+
+  <input type="email" name="email" placeholder="Email" required />
+
+  <textarea name="message" placeholder="Message" required></textarea>
+
+  <button class="btn" type="submit">Send</button>
+
+</form>
   </div>
 </section>
 

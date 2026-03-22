@@ -218,15 +218,55 @@ if (toggleBtn) {
    PLAYWRIGHT ANIMATION
 ========================= */
 const steps = document.querySelectorAll(".step");
+const progress = document.querySelector(".progress");
+const statusText = document.querySelector(".test-status");
 
 if (steps.length > 0) {
   let index = 0;
 
-  setInterval(() => {
-    steps.forEach(s => s.classList.remove("active"));
-    steps[index].classList.add("active");
-    index = (index + 1) % steps.length;
-  }, 1200);
+  const statuses = [
+    "Launching browser...",
+    "Navigate to Po creation page...",
+    "Entering details...",
+    "Submitting PO...",
+    "PO created successfully ✅"
+  ];
+
+  function runTest() {
+    if (index < steps.length) {
+
+      steps.forEach(s => s.classList.remove("active"));
+
+      if (index > 0) {
+        steps[index - 1].classList.add("done");
+      }
+
+      steps[index].classList.add("active");
+
+      let percent = ((index + 1) / steps.length) * 100;
+      progress.style.width = percent + "%";
+
+      statusText.textContent = statuses[index];
+
+      index++;
+
+      setTimeout(runTest, 1200);
+
+    } else {
+
+      setTimeout(() => {
+        steps.forEach(s => {
+          s.classList.remove("done", "active");
+        });
+        progress.style.width = "0%";
+        index = 0;
+        statusText.textContent = "Restarting tests...";
+        setTimeout(runTest, 1000);
+      }, 2500);
+    }
+  }
+
+  runTest();
 }
 
 
@@ -276,3 +316,15 @@ document.querySelectorAll("#navMenu a").forEach(link => {
     navMenu.classList.remove("active");
   });
 });
+/* =========================
+   CONTACT FORM RefRESH (BASIC VALIDATION)
+========================= */
+const form = document.querySelector(".contact-form");
+
+if (form) {
+  form.addEventListener("submit", () => {
+    setTimeout(() => {
+      form.reset(); // clears all fields
+    }, 500);
+  });
+}

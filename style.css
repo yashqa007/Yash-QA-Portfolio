@@ -572,3 +572,58 @@ img {
 .contact-info a:hover {
   text-decoration: underline;
 }
+/* ===== PLAYWRIGHT REAL SIMULATION ===== */
+
+.test-container {
+  margin-top: 20px;
+}
+
+.test-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.step {
+  padding: 10px 15px;
+  border: 1px solid cyan;
+  border-radius: 10px;
+  opacity: 0.3;
+  transition: 0.4s;
+}
+
+.step.active {
+  opacity: 1;
+  background: cyan;
+  color: black;
+  box-shadow: 0 0 15px cyan;
+}
+
+.step.done {
+  opacity: 1;
+  background: #9b5cff;
+  color: white;
+}
+
+.progress-bar {
+  width: 80%;
+  height: 8px;
+  background: rgba(255,255,255,0.1);
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, cyan, #9b5cff);
+  transition: width 0.4s;
+}
+
+.test-status {
+  margin-top: 10px;
+  color: cyan;
+  font-family: monospace;
+}
