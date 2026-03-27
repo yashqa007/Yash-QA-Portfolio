@@ -302,7 +302,7 @@ revealElements.forEach(el => {
    GITHUB BUTTON
 ========================= */
 function openGithub() {
-  window.open("https://github.com/", "_blank");
+  window.open("https://github.com/yashqa007", "_blank");
 }
 // MOBILE MENU TOGGLE
 const menuToggle = document.getElementById("menuToggle");
